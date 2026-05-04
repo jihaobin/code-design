@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import "@open-codesign/ui/theme.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
+
+button,
+textarea {
+  font: inherit;
+}

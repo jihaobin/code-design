@@ -1,0 +1,69 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".changeset/**"
+      - "packages/**"
+      - "apps/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  release:
+    name: Version PR
+    runs-on: ubuntu-latest
+    if: github.repository == 'open-codesign/open-codesign'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check Changesets setup
+        id: changesets
+        shell: bash
+        run: |
+          if [ -f .changeset/config.json ] && grep -q '"version-packages"' package.json; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Changesets versioning is not configured yet; skipping version PR."
+          fi
+
+      - name: Setup pnpm
+        if: steps.changesets.outputs.enabled == 'true'
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        if: steps.changesets.outputs.enabled == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install
+        if: steps.changesets.outputs.enabled == 'true'
+        run: vp install --frozen-lockfile
+
+      # Versioning only. Publishing (npm + GitHub release artifacts) is
+      # intentionally NOT wired up yet — packaging needs code-signing
+      # (Mac notarization, Windows Authenticode) which we do not have.
+      - name: Create Version Pull Request
+        if: steps.changesets.outputs.enabled == 'true'
+        uses: changesets/action@v1
+        with:
+          version: vp run version-packages
+          commit: "chore(release): version packages"
+          title: "chore(release): version packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

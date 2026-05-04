@@ -1,0 +1,4 @@
+# Default reviewers for any change in the repository.
+# Replace this with the owning GitHub org/team once the repository location is final.
+
+* @open-codesign/maintainers

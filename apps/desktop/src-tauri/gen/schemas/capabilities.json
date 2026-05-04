@@ -1,0 +1,9 @@
+{
+  "default": {
+    "identifier": "default",
+    "description": "Default capability for the main open-codesign window. Shell execution is intentionally not enabled until a reviewed Node sidecar boundary exists.",
+    "local": true,
+    "windows": ["main"],
+    "permissions": ["core:default"]
+  }
+}

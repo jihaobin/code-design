@@ -1,0 +1,23 @@
+{
+  "name": "code-design",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "ready": "vp check && vp test && vp run -r build",
+    "dev": "vp run @open-codesign/desktop#desktop:dev",
+    "build": "vp run -r build",
+    "desktop:build": "vp run @open-codesign/desktop#desktop:build",
+    "prepare": "vp config"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "catalog:",
+    "@tauri-apps/cli": "catalog:",
+    "@types/node": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "packageManager": "pnpm@10.30.1"
+}
