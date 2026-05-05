@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository == 'open-codesign/open-codesign'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -42,11 +42,11 @@ jobs:
 
       - name: Setup pnpm
         if: steps.changesets.outputs.enabled == 'true'
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
 
       - name: Setup Node
         if: steps.changesets.outputs.enabled == 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
           cache: pnpm
