@@ -1,7 +1,7 @@
 # 配置
 
-open-codesign 将配置存储在 `~/.config/open-codesign/config.toml` 的 TOML 文件中
-（如果设置了 `$XDG_CONFIG_HOME/open-codesign/config.toml`，则使用该路径）。该文件在首次
+open-design 将配置存储在 `~/.config/open-design/config.toml` 的 TOML 文件中
+（如果设置了 `$XDG_CONFIG_HOME/open-design/config.toml`，则使用该路径）。该文件在首次
 成功完成引导时创建，是提供商、模型和密钥引用的唯一真实来源。真实 API 密钥存储在
 操作系统钥匙串中，不写入该 TOML 文件。
 
@@ -15,7 +15,7 @@ modelFast = "claude-haiku-3"
 
 [secrets.anthropic]
 backend = "system-keychain"
-service = "open-codesign"
+service = "open-design"
 account = "provider:anthropic:api-key"
 ```
 
@@ -28,7 +28,7 @@ account = "provider:anthropic:api-key"
 | `modelPrimary`               | string | 是             | —                 | 主要设计模型 ID（特定于提供商）。                                |
 | `modelFast`                  | string | 是             | —                 | 快速完成模型 ID（特定于提供商）。                                |
 | `secrets.<provider>.backend` | string | 活跃提供商必填 | `system-keychain` | 密钥存储后端。v0.1 仅支持 `system-keychain`。                    |
-| `secrets.<provider>.service` | string | 活跃提供商必填 | `open-codesign`   | 操作系统钥匙串中的服务名。                                       |
+| `secrets.<provider>.service` | string | 活跃提供商必填 | `open-design`     | 操作系统钥匙串中的服务名。                                       |
 | `secrets.<provider>.account` | string | 活跃提供商必填 | —                 | 操作系统钥匙串中的账户名，格式为 `provider:<provider>:api-key`。 |
 
 ## 安全模型
@@ -64,8 +64,8 @@ account = "provider:anthropic:api-key"
 删除文件会重置非敏感配置：
 
 ```bash
-rm ~/.config/open-codesign/config.toml
+rm ~/.config/open-design/config.toml
 ```
 
 下次启动时将返回至引导向导。若要完全清除凭证，还需要从系统钥匙串中删除
-`service = "open-codesign"`、`account = "provider:<provider>:api-key"` 对应的条目。
+`service = "open-design"`、`account = "provider:<provider>:api-key"` 对应的条目。

@@ -18,10 +18,10 @@ describe("Tailwind theme integration", () => {
     expect(themePath).toBe("./src/theme.css");
     if (themePath !== "./src/theme.css") throw new Error("Missing ./theme.css export");
     expect(read(`packages/ui/${themePath.slice(2)}`)).toContain("@theme");
-    expect(themeCss).toContain("var(--codesign-color-background)");
+    expect(themeCss).toContain("var(--open-design-color-background)");
     expect(themeCss).not.toContain("--color-background: var(--color-background)");
-    expect(tokensCss).toContain("--codesign-color-background:");
-    expect(tokensCss).toContain("--color-background: var(--codesign-color-background)");
+    expect(tokensCss).toContain("--open-design-color-background:");
+    expect(tokensCss).toContain("--color-background: var(--open-design-color-background)");
   });
 
   it("desktop imports Tailwind and the shared theme stylesheet", () => {
@@ -32,7 +32,7 @@ describe("Tailwind theme integration", () => {
 
     expect(desktopPackage.dependencies?.["tailwindcss"]).toBe("catalog:");
     expect(desktopCss).toContain('@import "tailwindcss"');
-    expect(desktopCss).toContain('@import "@open-codesign/ui/theme.css"');
+    expect(desktopCss).toContain('@import "@open-design/ui/theme.css"');
   });
 
   it("Vite uses the Tailwind CSS plugin", () => {

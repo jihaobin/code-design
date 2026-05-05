@@ -80,14 +80,14 @@ export const ChatMessage = z.object({
 });
 export type ChatMessage = z.infer<typeof ChatMessage>;
 
-export class CodesignError extends Error {
+export class OpenDesignError extends Error {
   constructor(
     message: string,
     public readonly code: string,
     options?: { cause?: unknown },
   ) {
     super(message, options);
-    this.name = "CodesignError";
+    this.name = "OpenDesignError";
   }
 }
 

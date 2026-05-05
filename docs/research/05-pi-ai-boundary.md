@@ -4,7 +4,7 @@
 
 ## 决策
 
-**使用 `@mariozechner/pi-ai`（v0.67.x）作为 LLM transport layer。固定到稳定版本。把缺失能力包装在 `packages/providers` 中。不要 fork。**
+**使用 `@mariozechner/pi-ai`（当前 catalog 固定为 `^0.72.1`）作为 LLM transport layer。固定到稳定版本。把缺失能力包装在 `packages/providers` 中。不要 fork。**
 
 ## pi-ai 给我们的能力 ✅
 
@@ -27,7 +27,7 @@
 | ------------------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------- |
 | **Structured output / JSON schema**   | `design_params` slider JSON 需要它 | 使用 forced tool calls（Anthropic）+ `onPayload` hook 注入 `text.format`（OpenAI）的 wrapper |
 | **`<artifact>` tag streaming parser** | 需要兼容 Claude Artifacts protocol | 在 `packages/core` 中基于 `text_delta` events 做 state machine                               |
-| **PDF / audio input**                 | 对 design briefs 有用              | 这些调用直接用 `@anthropic-ai/sdk`（一次性、受限）                                           |
+| **PDF / audio input**                 | 对 design briefs 有用              | 推迟到 `packages/providers` 边界内实现；应用代码不直接导入 provider SDK                      |
 | **Auto provider fallback**            | 鲁棒性                             | `streamWithFallback([m1, m2])` wrapper                                                       |
 | **Provider-level retry**              | 只有 Gemini CLI 有                 | `completeWithRetry()` exponential backoff wrapper                                            |
 | **Zod → Tool helper**                 | 便利性                             | 使用现有 `zod-to-json-schema` dep 的 3-line util                                             |
@@ -66,10 +66,10 @@ export function zodToTool<T extends ZodTypeAny>(
   name: string, description: string, schema: T
 ): Tool
 
-// 6. PDF input (escape hatch — direct SDK)
+// 6. PDF input (provider-boundary extension)
 export async function completeWithPdf(
   pdfBase64: string, prompt: string
-): Promise<string>  // Anthropic only for v0.x
+): Promise<string>  // implemented only inside packages/providers
 ```
 
 ## 维护风险

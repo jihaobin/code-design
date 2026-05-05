@@ -34,9 +34,9 @@
 
 ## 3. 配置是人类可读的
 
-- ✅ Config 位于 `~/.config/open-codesign/config.toml` — TOML，不是 JSON，不是二进制
-- ✅ 每个 setting 都有 CLI 等价项：`open-codesign config set anthropic.key=…`
-- ✅ 一条命令导出/导入（`open-codesign config export > backup.toml`）
+- ✅ Config 位于 `~/.config/open-design/config.toml` — TOML，不是 JSON，不是二进制
+- ✅ 每个 setting 都有 CLI 等价项：`open-design config set anthropic.key=…`
+- ✅ 一条命令导出/导入（`open-design config export > backup.toml`）
 - ❌ 不用不透明 app-store blobs；config 不用 SQLite
 - ✅ 默认值记录在 `docs/CONFIG.md` 中，包含每个 key
 
@@ -57,15 +57,15 @@
 
 具体示例：
 
-| 功能             | Tier 1（先发布）                            | Tier 2                                           | Tier 3                                  |
-| ---------------- | ------------------------------------------- | ------------------------------------------------ | --------------------------------------- |
-| Inline comment   | 每次评论都把整个 HTML 重新发给模型          | 带稳定 `data-codesign-id` 的 str_replace patches | Optimistic UI + diff streaming          |
-| Custom sliders   | 每个设计固定 3 个滑块（color/spacing/font） | AI 输出 `design_params` JSON                     | 每个滑块的 AI explanation tooltips      |
-| Multi-model A/B  | 顺序运行，显示在 tabs 中                    | 并行 streams，三列                               | 输出之间的 diff highlighting            |
-| URL style steal  | 只截图，发送给 vision model                 | DOM scrape + computed style extraction           | Component-level pattern matching        |
-| Codebase → DS    | 只读 `tailwind.config.js`                   | 遍历 `**/*.css` 查找 variables                   | 设计 tokens 的完整 AST analysis         |
-| PPTX export      | 每个 HTML 页面一张 slide，嵌入 screenshot   | dom-to-pptx 生成可编辑 shapes                    | Font embedding + CJK patches            |
-| Reverse Redesign | 单次 vision call，输出新 HTML               | 多步 refine loop                                 | 带 brand preservation 的 style transfer |
+| 功能             | Tier 1（先发布）                            | Tier 2                                              | Tier 3                                  |
+| ---------------- | ------------------------------------------- | --------------------------------------------------- | --------------------------------------- |
+| Inline comment   | 每次评论都把整个 HTML 重新发给模型          | 带稳定 `data-open-design-id` 的 str_replace patches | Optimistic UI + diff streaming          |
+| Custom sliders   | 每个设计固定 3 个滑块（color/spacing/font） | AI 输出 `design_params` JSON                        | 每个滑块的 AI explanation tooltips      |
+| Multi-model A/B  | 顺序运行，显示在 tabs 中                    | 并行 streams，三列                                  | 输出之间的 diff highlighting            |
+| URL style steal  | 只截图，发送给 vision model                 | DOM scrape + computed style extraction              | Component-level pattern matching        |
+| Codebase → DS    | 只读 `tailwind.config.js`                   | 遍历 `**/*.css` 查找 variables                      | 设计 tokens 的完整 AST analysis         |
+| PPTX export      | 每个 HTML 页面一张 slide，嵌入 screenshot   | dom-to-pptx 生成可编辑 shapes                       | Font embedding + CJK patches            |
+| Reverse Redesign | 单次 vision call，输出新 HTML               | 多步 refine loop                                    | 带 brand preservation 的 style transfer |
 
 经验法则：**如果第 1 层需要超过 2 天，这个功能对 first cut 来说就太有野心 — 选择一个更简单的第 1 层。**
 

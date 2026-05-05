@@ -21,7 +21,7 @@
 ### 对比表格模板
 
 ```
-| 功能特性 | open-codesign | Claude Design | v0 (Vercel) | Bolt.new |
+| 功能特性 | open-design | Claude Design | v0 (Vercel) | Bolt.new |
 |---|---|---|---|---|
 | 开源状态 | ✅ Apache-2.0 | ❌ 闭源 | ❌ 闭源 | ✅ 开源 (bolt.diy) |
 | 桌面原生 | ✅ Tauri v2 | ❌ 仅网页 | ❌ 仅网页 | ❌ 仅网页 |
@@ -41,7 +41,7 @@ ai-design, ai-design-tool, claude-design, 开源, tauri, 桌面应用, byok, 本
 
 标题（148 字符）：
 
-> Show HN：open-codesign – 开源 Tauri AI 设计工具，自带密钥，支持 Claude/GPT-4o/Gemini/Ollama
+> Show HN：open-design – 开源 Tauri AI 设计工具，自带密钥，支持 Claude/GPT-4o/Gemini/Ollama
 
 正文（约 600 字）：请参阅 2026 年 4 月 18 日存档的智能体输出（我们将在发布前进行完善）。
 

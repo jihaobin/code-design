@@ -1,13 +1,13 @@
 [package]
-name = "open-codesign"
+name = "open-design"
 version = "0.0.0"
-description = "Tauri desktop wrapper for open-codesign"
-authors = ["open-codesign contributors"]
+description = "Tauri desktop wrapper for open-design"
+authors = ["open-design contributors"]
 license = "Apache-2.0"
 edition = "2021"
 
 [lib]
-name = "open_codesign_lib"
+name = "open_design_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]

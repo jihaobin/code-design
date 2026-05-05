@@ -1,7 +1,7 @@
-import { createArtifactParser } from "@open-codesign/artifacts";
-import { complete } from "@open-codesign/providers";
-import type { Artifact, ChatMessage, ModelRef } from "@open-codesign/shared";
-import { CodesignError } from "@open-codesign/shared";
+import { createArtifactParser } from "@open-design/artifacts";
+import { complete } from "@open-design/providers";
+import type { Artifact, ChatMessage, ModelRef } from "@open-design/shared";
+import { OpenDesignError } from "@open-design/shared";
 
 export interface GenerateInput {
   prompt: string;
@@ -36,7 +36,7 @@ Use Tailwind via the CDN script <script src="https://cdn.tailwindcss.com"></scri
  */
 export async function generate(input: GenerateInput): Promise<GenerateOutput> {
   if (!input.prompt.trim()) {
-    throw new CodesignError("Prompt cannot be empty", "INPUT_EMPTY_PROMPT");
+    throw new OpenDesignError("Prompt cannot be empty", "INPUT_EMPTY_PROMPT");
   }
 
   const messages: ChatMessage[] = [

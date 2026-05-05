@@ -6,9 +6,9 @@
 
 | 机制                    | 选定方案                                                                                                       |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------- |
-| Element selection       | 在同源 srcdoc iframe 中注入 overlay script；按 `data-codesign-id`（优先）> `id` > XPath fallback 识别          |
+| Element selection       | 在同源 srcdoc iframe 中注入 overlay script；按 `data-open-design-id`（优先）> `id` > XPath fallback 识别       |
 | Comment-to-AI patch     | 向 LLM 发送元素 `outerHTML` + comment；要求返回 **str_replace** block（Anthropic `text_editor_20250728` 格式） |
-| Cross-version stability | AI 必须在初始生成时为每个元素注入稳定的 `data-codesign-id`；后续 edits 通过 id 定位                            |
+| Cross-version stability | AI 必须在初始生成时为每个元素注入稳定的 `data-open-design-id`；后续 edits 通过 id 定位                         |
 | Slider rendering        | AI 在 HTML 旁输出 `design_params` JSON；frontend 渲染 controls；通过 CSS variables 绑定                        |
 | Slider update           | 直接在 iframe `:root` 上调用 `setProperty()` — value tweaks 不重新运行模型                                     |
 
@@ -24,7 +24,7 @@ document.addEventListener(
     window.parent.postMessage(
       {
         type: "ELEMENT_SELECTED",
-        id: e.target.dataset.codesignId,
+        id: e.target.dataset.openDesignId,
         xpath: getXPath(e.target),
         outerHTML: e.target.outerHTML.slice(0, 500),
         rect: e.target.getBoundingClientRect(),

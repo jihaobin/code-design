@@ -1,3 +1,3 @@
 fn main() {
-    open_codesign_lib::run();
+    open_design_lib::run();
 }

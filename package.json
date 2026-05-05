@@ -1,13 +1,13 @@
 {
-  "name": "code-design",
+  "name": "open-design",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "ready": "vp check && vp test && vp run -r build",
-    "dev": "vp run @open-codesign/desktop#desktop:dev",
+    "dev": "vp run @open-design/desktop#desktop:dev",
     "build": "vp run -r build",
-    "desktop:build": "vp run @open-codesign/desktop#desktop:build",
+    "desktop:build": "vp run @open-design/desktop#desktop:build",
     "prepare": "vp config"
   },
   "devDependencies": {

@@ -6,7 +6,7 @@
  * Tier 1 implementations: minimum viable. Tier 2 features tracked separately.
  */
 
-import { type ChatMessage, CodesignError, type ModelRef } from "@open-codesign/shared";
+import { type ChatMessage, OpenDesignError, type ModelRef } from "@open-design/shared";
 
 export interface GenerateOptions {
   apiKey: string;
@@ -33,7 +33,7 @@ export async function complete(
   opts: GenerateOptions,
 ): Promise<GenerateResult> {
   if (!opts.apiKey) {
-    throw new CodesignError("Missing API key", "PROVIDER_AUTH_MISSING");
+    throw new OpenDesignError("Missing API key", "PROVIDER_AUTH_MISSING");
   }
 
   const pi = (await import("@mariozechner/pi-ai")) as unknown as {
@@ -52,7 +52,7 @@ export async function complete(
 
   const piModel = pi.getModel(model.provider, model.modelId);
   if (!piModel) {
-    throw new CodesignError(
+    throw new OpenDesignError(
       `Unknown model ${model.provider}:${model.modelId}`,
       "PROVIDER_MODEL_UNKNOWN",
     );
@@ -67,7 +67,10 @@ export async function complete(
   const result = await pi.completeSimple(piModel, { messages }, piOpts);
 
   if (result.stopReason === "error") {
-    throw new CodesignError(result.errorMessage ?? "Provider returned an error", "PROVIDER_ERROR");
+    throw new OpenDesignError(
+      result.errorMessage ?? "Provider returned an error",
+      "PROVIDER_ERROR",
+    );
   }
 
   const text = result.content

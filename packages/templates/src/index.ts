@@ -1,6 +1,6 @@
 /**
  * Built-in demo prompts. Aligned with the eight Claude Design demos
- * we committed to replicate (see docs/VISION.zh.md).
+ * we committed to replicate (see docs/VISION.md).
  */
 
 export interface DemoTemplate {

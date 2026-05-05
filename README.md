@@ -1,14 +1,14 @@
-# open-codesign
+# open-design
 
 > Open-source AI design tool — prompt to interactive prototype, slide deck, and marketing assets. Multi-model, BYOK, runs on your laptop.
 
-[愿景](./docs/VISION.zh.md) · [路线图](./docs/ROADMAP.zh.md)
+[愿景](./docs/VISION.md) · [路线图](./docs/ROADMAP.md)
 
 ---
 
 **Status**: 🚧 Pre-alpha — designing in public. Not usable yet.
 
-open-codesign is an open-source desktop app that turns natural-language prompts into HTML prototypes, PDF one-pagers, PPTX decks, and design-system-aware mockups. Built as the open counterpart to Claude Design, with multi-provider model support and a local-first storage model.
+open-design is an open-source desktop app that turns natural-language prompts into HTML prototypes, PDF one-pagers, PPTX decks, and design-system-aware mockups. Built as the open counterpart to Claude Design, with multi-provider model support and a local-first storage model.
 
 ## Why
 
@@ -19,7 +19,7 @@ open-codesign is an open-source desktop app that turns natural-language prompts 
 
 ## Status & Roadmap
 
-See [`docs/ROADMAP.zh.md`](./docs/ROADMAP.zh.md). MVP success criterion: replicate every public Claude Design demo.
+See [`docs/ROADMAP.md`](./docs/ROADMAP.md). MVP success criterion: replicate every public Claude Design demo.
 
 ## License
 

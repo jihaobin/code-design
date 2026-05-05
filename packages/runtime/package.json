@@ -1,5 +1,5 @@
 {
-  "name": "@open-codesign/runtime",
+  "name": "@open-design/runtime",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -14,7 +14,7 @@
     "test": "vp test run --passWithNoTests"
   },
   "dependencies": {
-    "@open-codesign/shared": "workspace:*"
+    "@open-design/shared": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "catalog:",

@@ -1,5 +1,5 @@
 {
-  "name": "@open-codesign/core",
+  "name": "@open-design/core",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -13,9 +13,9 @@
     "test": "vp test run --passWithNoTests"
   },
   "dependencies": {
-    "@open-codesign/artifacts": "workspace:*",
-    "@open-codesign/providers": "workspace:*",
-    "@open-codesign/shared": "workspace:*"
+    "@open-design/artifacts": "workspace:*",
+    "@open-design/providers": "workspace:*",
+    "@open-design/shared": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "catalog:",

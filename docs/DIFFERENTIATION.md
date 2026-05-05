@@ -1,6 +1,6 @@
 # 差异化
 
-open-codesign 能做到、而 Claude Design（以及其他 AI 设计工具）不能或不会做的事情。
+open-design 能做到、而 Claude Design（以及其他 AI 设计工具）不能或不会做的事情。
 
 ## 结构性优势（由我们的架构天然带来）
 
@@ -16,14 +16,14 @@ open-codesign 能做到、而 Claude Design（以及其他 AI 设计工具）不
 
 按 `(impact × ease)` 评分。这些会和八个 Claude Design 演示一起交付。
 
-| 功能                                                                     | 阶段 | 为什么它会传播                                       |
-| ------------------------------------------------------------------------ | ---- | ---------------------------------------------------- |
-| **三栏模型 A/B 竞速**（同一提示词 → Opus vs GPT-5 vs Gemini 并排）       | v0.2 | 天然适合发推截图；“哪个模型设计最好”的争论会自我推动 |
-| **CLI 模式**（`codesign "make me a landing page" -m gpt-5 -o out.html`） | v0.3 | HN 首页诱饵；可集成进 shell、Makefiles、CI           |
-| **Steal URL Style**（粘贴任意 URL → 学习美学 → 应用到你的内容）          | v0.3 | 30 秒演示视频格式；立即有实用价值                    |
-| **Reverse Redesign**（指向任意丑网站 → AI 重设计）                       | v0.4 | 经典 before/after Twitter 形式                       |
-| **本地 Ollama 零成本预设**                                               | v0.4 | “永远免费，无需 API key”的标语                       |
-| **多 IDE 交付**（Cursor / Cline / Aider / Claude Code 等）               | v0.5 | 连接整个 AI 编程生态                                 |
+| 功能                                                                        | 阶段 | 为什么它会传播                                       |
+| --------------------------------------------------------------------------- | ---- | ---------------------------------------------------- |
+| **三栏模型 A/B 竞速**（同一提示词 → Opus vs GPT-5 vs Gemini 并排）          | v0.2 | 天然适合发推截图；“哪个模型设计最好”的争论会自我推动 |
+| **CLI 模式**（`open-design "make me a landing page" -m gpt-5 -o out.html`） | v0.3 | HN 首页诱饵；可集成进 shell、Makefiles、CI           |
+| **Steal URL Style**（粘贴任意 URL → 学习美学 → 应用到你的内容）             | v0.3 | 30 秒演示视频格式；立即有实用价值                    |
+| **Reverse Redesign**（指向任意丑网站 → AI 重设计）                          | v0.4 | 经典 before/after Twitter 形式                       |
+| **本地 Ollama 零成本预设**                                                  | v0.4 | “永远免费，无需 API key”的标语                       |
+| **多 IDE 交付**（Cursor / Cline / Aider / Claude Code 等）                  | v0.5 | 连接整个 AI 编程生态                                 |
 
 ## 暂缓路线图（1.0 之后）
 

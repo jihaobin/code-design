@@ -11,7 +11,7 @@ export const OVERLAY_SCRIPT = `(function() {
   let hovered = null;
 
   function getXPath(el) {
-    if (el.dataset && el.dataset.codesignId) return '[data-codesign-id="' + el.dataset.codesignId + '"]';
+    if (el.dataset && el.dataset.openDesignId) return '[data-open-design-id="' + el.dataset.openDesignId + '"]';
     if (el.id) return '#' + el.id;
     const parts = [];
     while (el && el.nodeType === 1 && el !== document.body) {
@@ -41,7 +41,7 @@ export const OVERLAY_SCRIPT = `(function() {
     const el = e.target;
     const rect = el.getBoundingClientRect();
     window.parent.postMessage({
-      __codesign: true,
+      __openDesign: true,
       type: 'ELEMENT_SELECTED',
       selector: getXPath(el),
       tag: el.tagName.toLowerCase(),
@@ -52,7 +52,7 @@ export const OVERLAY_SCRIPT = `(function() {
 })();`;
 
 export interface OverlayMessage {
-  __codesign: true;
+  __openDesign: true;
   type: "ELEMENT_SELECTED";
   selector: string;
   tag: string;
@@ -64,7 +64,7 @@ export function isOverlayMessage(data: unknown): data is OverlayMessage {
   return (
     typeof data === "object" &&
     data !== null &&
-    (data as { __codesign?: boolean }).__codesign === true &&
+    (data as { __openDesign?: boolean }).__openDesign === true &&
     (data as { type?: string }).type === "ELEMENT_SELECTED"
   );
 }

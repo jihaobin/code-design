@@ -1,112 +1,112 @@
 /**
- * Design tokens for open-codesign.
- * Warm, local-first design tokens for open-codesign.
+ * Design tokens for open-design.
+ * Warm, local-first design tokens for open-design.
  * All values are CSS custom properties - never hardcode.
  */
 
 :root {
   /* Surface */
-  --codesign-color-background: #faf8f3;
-  --codesign-color-background-secondary: #f3efe6;
-  --codesign-color-surface: #ffffff;
-  --codesign-color-surface-hover: #f7f4ec;
-  --codesign-color-surface-active: #efeae0;
-  --codesign-color-surface-muted: #f3efe6;
+  --open-design-color-background: #faf8f3;
+  --open-design-color-background-secondary: #f3efe6;
+  --open-design-color-surface: #ffffff;
+  --open-design-color-surface-hover: #f7f4ec;
+  --open-design-color-surface-active: #efeae0;
+  --open-design-color-surface-muted: #f3efe6;
 
   /* Border */
-  --codesign-color-border: #e3ddd0;
-  --codesign-color-border-muted: #ece6d8;
-  --codesign-color-border-subtle: #f3efe6;
+  --open-design-color-border: #e3ddd0;
+  --open-design-color-border-muted: #ece6d8;
+  --open-design-color-border-subtle: #f3efe6;
 
   /* Accent */
-  --codesign-color-accent: #c96442;
-  --codesign-color-accent-hover: #b75636;
-  --codesign-color-accent-muted: #f3d9cf;
+  --open-design-color-accent: #c96442;
+  --open-design-color-accent-hover: #b75636;
+  --open-design-color-accent-muted: #f3d9cf;
 
   /* Text */
-  --codesign-color-text-primary: #1f1d18;
-  --codesign-color-text-secondary: #57544c;
-  --codesign-color-text-muted: #8c887d;
+  --open-design-color-text-primary: #1f1d18;
+  --open-design-color-text-secondary: #57544c;
+  --open-design-color-text-muted: #8c887d;
 
   /* Semantic */
-  --codesign-color-success: #4f7a52;
-  --codesign-color-warning: #b8862a;
-  --codesign-color-error: #b04030;
-  --codesign-color-mcp: #4a6b8a;
+  --open-design-color-success: #4f7a52;
+  --open-design-color-warning: #b8862a;
+  --open-design-color-error: #b04030;
+  --open-design-color-mcp: #4a6b8a;
 
   /* Shadow */
-  --codesign-shadow-soft: 0 1px 2px rgba(31, 29, 24, 0.04);
-  --codesign-shadow-card: 0 2px 8px rgba(31, 29, 24, 0.06);
-  --codesign-shadow-elevated: 0 8px 24px rgba(31, 29, 24, 0.1);
+  --open-design-shadow-soft: 0 1px 2px rgba(31, 29, 24, 0.04);
+  --open-design-shadow-card: 0 2px 8px rgba(31, 29, 24, 0.06);
+  --open-design-shadow-elevated: 0 8px 24px rgba(31, 29, 24, 0.1);
 
   /* Type scale */
-  --codesign-font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
-  --codesign-font-mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  --open-design-font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --open-design-font-mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
 
   /* Radius */
-  --codesign-radius-sm: 6px;
-  --codesign-radius-md: 8px;
-  --codesign-radius-lg: 10px;
-  --codesign-radius-xl: 14px;
-  --codesign-radius-2xl: 16px;
+  --open-design-radius-sm: 6px;
+  --open-design-radius-md: 8px;
+  --open-design-radius-lg: 10px;
+  --open-design-radius-xl: 14px;
+  --open-design-radius-2xl: 16px;
 
-  --color-background: var(--codesign-color-background);
-  --color-background-secondary: var(--codesign-color-background-secondary);
-  --color-surface: var(--codesign-color-surface);
-  --color-surface-hover: var(--codesign-color-surface-hover);
-  --color-surface-active: var(--codesign-color-surface-active);
-  --color-surface-muted: var(--codesign-color-surface-muted);
-  --color-border: var(--codesign-color-border);
-  --color-border-muted: var(--codesign-color-border-muted);
-  --color-border-subtle: var(--codesign-color-border-subtle);
-  --color-accent: var(--codesign-color-accent);
-  --color-accent-hover: var(--codesign-color-accent-hover);
-  --color-accent-muted: var(--codesign-color-accent-muted);
-  --color-text-primary: var(--codesign-color-text-primary);
-  --color-text-secondary: var(--codesign-color-text-secondary);
-  --color-text-muted: var(--codesign-color-text-muted);
-  --color-success: var(--codesign-color-success);
-  --color-warning: var(--codesign-color-warning);
-  --color-error: var(--codesign-color-error);
-  --color-mcp: var(--codesign-color-mcp);
-  --shadow-soft: var(--codesign-shadow-soft);
-  --shadow-card: var(--codesign-shadow-card);
-  --shadow-elevated: var(--codesign-shadow-elevated);
-  --font-sans: var(--codesign-font-sans);
-  --font-mono: var(--codesign-font-mono);
-  --radius-sm: var(--codesign-radius-sm);
-  --radius-md: var(--codesign-radius-md);
-  --radius-lg: var(--codesign-radius-lg);
-  --radius-xl: var(--codesign-radius-xl);
-  --radius-2xl: var(--codesign-radius-2xl);
+  --color-background: var(--open-design-color-background);
+  --color-background-secondary: var(--open-design-color-background-secondary);
+  --color-surface: var(--open-design-color-surface);
+  --color-surface-hover: var(--open-design-color-surface-hover);
+  --color-surface-active: var(--open-design-color-surface-active);
+  --color-surface-muted: var(--open-design-color-surface-muted);
+  --color-border: var(--open-design-color-border);
+  --color-border-muted: var(--open-design-color-border-muted);
+  --color-border-subtle: var(--open-design-color-border-subtle);
+  --color-accent: var(--open-design-color-accent);
+  --color-accent-hover: var(--open-design-color-accent-hover);
+  --color-accent-muted: var(--open-design-color-accent-muted);
+  --color-text-primary: var(--open-design-color-text-primary);
+  --color-text-secondary: var(--open-design-color-text-secondary);
+  --color-text-muted: var(--open-design-color-text-muted);
+  --color-success: var(--open-design-color-success);
+  --color-warning: var(--open-design-color-warning);
+  --color-error: var(--open-design-color-error);
+  --color-mcp: var(--open-design-color-mcp);
+  --shadow-soft: var(--open-design-shadow-soft);
+  --shadow-card: var(--open-design-shadow-card);
+  --shadow-elevated: var(--open-design-shadow-elevated);
+  --font-sans: var(--open-design-font-sans);
+  --font-mono: var(--open-design-font-mono);
+  --radius-sm: var(--open-design-radius-sm);
+  --radius-md: var(--open-design-radius-md);
+  --radius-lg: var(--open-design-radius-lg);
+  --radius-xl: var(--open-design-radius-xl);
+  --radius-2xl: var(--open-design-radius-2xl);
 }
 
 .dark {
-  --codesign-color-background: #1a1815;
-  --codesign-color-background-secondary: #221f1b;
-  --codesign-color-surface: #26221d;
-  --codesign-color-surface-hover: #2d2925;
-  --codesign-color-surface-active: #34302b;
-  --codesign-color-surface-muted: #221f1b;
+  --open-design-color-background: #1a1815;
+  --open-design-color-background-secondary: #221f1b;
+  --open-design-color-surface: #26221d;
+  --open-design-color-surface-hover: #2d2925;
+  --open-design-color-surface-active: #34302b;
+  --open-design-color-surface-muted: #221f1b;
 
-  --codesign-color-border: #3a352f;
-  --codesign-color-border-muted: #2f2b26;
-  --codesign-color-border-subtle: #26221d;
+  --open-design-color-border: #3a352f;
+  --open-design-color-border-muted: #2f2b26;
+  --open-design-color-border-subtle: #26221d;
 
-  --codesign-color-accent: #d97757;
-  --codesign-color-accent-hover: #e88868;
-  --codesign-color-accent-muted: #4a2b22;
+  --open-design-color-accent: #d97757;
+  --open-design-color-accent-hover: #e88868;
+  --open-design-color-accent-muted: #4a2b22;
 
-  --codesign-color-text-primary: #f5f1e8;
-  --codesign-color-text-secondary: #b8b3a6;
-  --codesign-color-text-muted: #807b6f;
+  --open-design-color-text-primary: #f5f1e8;
+  --open-design-color-text-secondary: #b8b3a6;
+  --open-design-color-text-muted: #807b6f;
 
-  --codesign-color-success: #6b9c6e;
-  --codesign-color-warning: #d4a04a;
-  --codesign-color-error: #d96050;
-  --codesign-color-mcp: #6a8aab;
+  --open-design-color-success: #6b9c6e;
+  --open-design-color-warning: #d4a04a;
+  --open-design-color-error: #d96050;
+  --open-design-color-mcp: #6a8aab;
 
-  --codesign-shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --codesign-shadow-card: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --codesign-shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --open-design-shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --open-design-shadow-card: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --open-design-shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.5);
 }

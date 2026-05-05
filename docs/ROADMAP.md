@@ -6,7 +6,7 @@
 
 **目标**：仓库已经准备好接收代码。
 
-- [ ] 仓库已创建（`open-codesign`）
+- [ ] 仓库已创建（`open-design`）
 - [ ] 本地 git 已初始化，remote 已链接
 - [ ] Vision、Principles、AGENTS.md 已起草
 - [ ] Apache-2.0 license + DCO + standard OSS files
@@ -19,7 +19,7 @@
 
 **目标**：用一个演示验证架构。不做 UI 打磨。
 
-依赖 `docs/RESEARCH_QUEUE.zh.md` 完成。研究完成后：
+依赖 `docs/RESEARCH_QUEUE.md` 完成。研究完成后：
 
 - [ ] `packages/providers` 包装 pi-ai，导出统一的 `generate()`
 - [ ] `packages/runtime` 在 iframe sandbox 中渲染一个 HTML artifact（sandbox 技术待研究项 #3 决定）
@@ -41,7 +41,7 @@
 
 **目标**：交付那些让我们区别于“又一个 AI HTML generator”的东西。
 
-- [ ] 内联评论 → 通过 `data-codesign-id` + str_replace 实现的 AI 补丁循环（已锁定，详见 `docs/research/02-inline-comment-and-sliders.md`）
+- [ ] 内联评论 → 通过 `data-open-design-id` + str_replace 实现的 AI 补丁循环（已锁定，详见 `docs/research/02-inline-comment-and-sliders.md`）
 - [ ] 通过 `design_params` JSON + CSS 变量（锁定，同一来源）生成的 AI 自定义滑块
 - [ ] 带 snapshot rollback 的 version timeline
 

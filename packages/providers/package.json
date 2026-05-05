@@ -1,5 +1,5 @@
 {
-  "name": "@open-codesign/providers",
+  "name": "@open-design/providers",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@mariozechner/pi-ai": "catalog:",
-    "@open-codesign/shared": "workspace:*"
+    "@open-design/shared": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "catalog:",

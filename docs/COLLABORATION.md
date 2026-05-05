@@ -1,6 +1,6 @@
 # 协作与开发工作流程
 
-我们如何在 open-codesign 上协同工作，与人类和 AI 智能体一起。
+我们如何在 open-design 上协同工作，与人类和 AI 智能体一起。
 
 ## 分支模型
 
@@ -22,7 +22,7 @@
 ```bash
 git worktree add -b wt/<slug> .claude/worktrees/<slug> main
 cd .claude/worktrees/<slug>
-pnpm install
+vp install
 # ...执行工作...
 git push -u origin wt/<slug>
 gh pr create --base main --head wt/<slug> --title "..."
@@ -40,7 +40,7 @@ git branch -D wt/<slug>
 3. **计划** — 对于超过 5 次工具调用或涉及 3 个以上文件的任务，在 `.claude/workspace/<slug>/task_plan.md` 中编写计划。引用相关的研究内容和 PRINCIPLES 章节。
 4. **仅限第一层级** — 实现能运行的最简版本（参见 PRINCIPLES §5）。如果第一层级需要超过 2 天完成，说明范围过大。
 5. **工作树分支** — 从主分支创建 `wt/<slug>`，推送并打开 PR。
-6. **机器人审查** — Codex PR 审查自动触发（带有 `*open-codesign Bot*` 签名）。将其发现视为与人类审查者同等重要。
+6. **机器人审查** — Codex PR 审查自动触发（带有 `*open-design Bot*` 签名）。将其发现视为与人类审查者同等重要。
 7. **人工审查** — 合并前至少需要一位人类批准。CODEOWNERS 会自动请求审查。
 8. **合并** — 若 PR 提交记录混乱则使用压缩合并，否则使用变基合并。必须确保 CI 通过。
 9. **清理** — 移除工作树，删除分支（`git push origin -d wt/<slug>`）。
@@ -100,7 +100,7 @@ git branch -D wt/<slug>
 
 1. 为其指定具体要创建/修改的文件，并列出"禁止触碰"清单
 2. 引用相关的 PRINCIPLES 章节 + 按路径标注的研究报告
-3. 要求其在推送前运行 `pnpm install && pnpm -r typecheck && pnpm lint && pnpm -r test` 并确认所有检查通过
+3. 要求其在推送前运行 `vp install && vp check && vp test && vp run -r build` 并确认所有检查通过
 4. 要求 DCO 签名（`git commit -s`）
 5. 限定范围为一个 PR；拒绝附带的重构
 6. 使用标准模板打开 PR；未经人工审查不得合并
@@ -120,8 +120,8 @@ git branch -D wt/<slug>
 
 一旦我们有了真实用户，我们将每季度进行一次优化冲刺：
 
-- 包体积审计：运行 `pnpm build:dir`，与预算对比，增量超过 1 MB 时提交 issue
-- 依赖审计：运行 `pnpm outdated`、`pnpm audit`，清理未使用的依赖
+- 包体积审计：运行 `vp run @open-design/desktop#desktop:build`，与预算对比，增量超过 1 MB 时提交 issue
+- 依赖审计：运行 `vp outdated`、`vp pm audit`，清理未使用的依赖
 - 死代码清理：使用 `knip` 或类似工具；移除无用的导出
 - Token 用量分析：分析哪些 Claude / OpenAI 调用成本最高；优化提示词和缓存策略
 - 用户体验会话录制（仅限选择加入）：识别常见的流失点

@@ -1,4 +1,4 @@
-# 愿景 — open-codesign
+# 愿景 — open-design
 
 已锁定的产品决策。需要通过 PR 更新，不要顺手改动。
 
@@ -27,18 +27,18 @@
 
 ## 已锁定决策
 
-| 决策        | 选择                                           | 理由                                                              |
-| ----------- | ---------------------------------------------- | ----------------------------------------------------------------- |
-| 形态        | Tauri v2 桌面包装（Mac + Win）                 | 更小安装体积；仅负责窗口和打包，产品逻辑留在 Node 24 / TypeScript |
-| 运行时      | Node 24 LTS                                    | 统一开发、CLI、sidecar 和本地任务运行时；跟随当前 LTS             |
-| 模型层      | `pi-ai`（多提供商）                            | 覆盖 Anthropic / OpenAI / Gemini / DeepSeek / OpenRouter / local  |
-| 认证        | 无 — BYOK                                      | 无后端，不承担用户密钥责任                                        |
-| 存储        | 本地 SQLite（`better-sqlite3`）+ 文件系统      | 本地优先，无云依赖                                                |
-| 设计语言    | open-codesign 自有 tokens（Claude 风格克制感） | 不依赖外部项目；视觉系统集中在 `packages/ui`                      |
-| 工具链      | Vite+ (`vp`) + pnpm workspace                  | 一个入口管理 install/dev/build/check/test/package                 |
-| Lint/格式化 | Vite+ Oxlint / Oxfmt / Vitest 体系             | 统一到 Vite+；避免多套 lint / format / test 工具并存              |
-| 许可证      | Apache-2.0                                     | 专利授权；对企业友好                                              |
-| 贡献者协议  | DCO（`Signed-off-by`）                         | 比 CLA 摩擦更小                                                   |
+| 决策        | 选择                                         | 理由                                                              |
+| ----------- | -------------------------------------------- | ----------------------------------------------------------------- |
+| 形态        | Tauri v2 桌面包装（Mac + Win）               | 更小安装体积；仅负责窗口和打包，产品逻辑留在 Node 24 / TypeScript |
+| 运行时      | Node 24 LTS                                  | 统一开发、CLI、sidecar 和本地任务运行时；跟随当前 LTS             |
+| 模型层      | `pi-ai`（多提供商）                          | 覆盖 Anthropic / OpenAI / Gemini / DeepSeek / OpenRouter / local  |
+| 认证        | 无 — BYOK                                    | 无后端，不承担用户密钥责任                                        |
+| 存储        | 本地 SQLite（`better-sqlite3`）+ 文件系统    | 本地优先，无云依赖                                                |
+| 设计语言    | open-design 自有 tokens（Claude 风格克制感） | 不依赖外部项目；视觉系统集中在 `packages/ui`                      |
+| 工具链      | Vite+ (`vp`) + pnpm workspace                | 一个入口管理 install/dev/build/check/test/package                 |
+| Lint/格式化 | Vite+ Oxlint / Oxfmt / Vitest 体系           | 统一到 Vite+；避免多套 lint / format / test 工具并存              |
+| 许可证      | Apache-2.0                                   | 专利授权；对企业友好                                              |
+| 贡献者协议  | DCO（`Signed-off-by`）                       | 比 CLA 摩擦更小                                                   |
 
 ## 杀手级演示（v1.0 必须交付）
 
@@ -55,7 +55,7 @@
 
 ## 与 Claude Design 的差异
 
-| 维度     | Claude Design     | open-codesign           |
+| 维度     | Claude Design     | open-design             |
 | -------- | ----------------- | ----------------------- |
 | 模型     | 仅 Opus 4.7       | 通过 pi-ai 支持多提供商 |
 | 形态     | Web SaaS          | 本地桌面端              |

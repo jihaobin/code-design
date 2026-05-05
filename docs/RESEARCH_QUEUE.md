@@ -8,7 +8,7 @@
 | --- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | 0   | Claude Design 初始产品调研      | 八个演示作为 v1.0 成功标准                                                                                           | （在对话中，2026-04-18）                        |
 | 1   | Claude Design hands-on teardown | UI = 左侧聊天 / 右侧画布 + 滑块；需要获取一个导出的 HTML 样本用于逆向工程                                            | [01](research/01-claude-design-teardown.md)     |
-| 2   | Inline comment + AI slider POC  | `data-codesign-id` 注入 + str_replace patch 用于评论；CSS variables + `design_params` JSON 用于滑块                  | [02](research/02-inline-comment-and-sliders.md) |
+| 2   | Inline comment + AI slider POC  | `data-open-design-id` 注入 + str_replace patch 用于评论；CSS variables + `design_params` JSON 用于滑块               | [02](research/02-inline-comment-and-sliders.md) |
 | 3   | Sandbox runtime selection       | **Tauri WebView iframe srcdoc + esbuild-wasm** 为主；Sandpack 兜底；拒绝 WebContainers                               | [03](research/03-sandbox-runtime.md)            |
 | 4   | PPTX library selection          | **pptxgenjs + dom-to-pptx** 为主；截图兜底；因 bundle 体积拒绝 python-pptx                                           | [04](research/04-pptx-export.md)                |
 | 5   | pi-ai capability boundary       | 使用 pi-ai，固定版本，在 `packages/providers` 中包装 6 项缺失能力；不要 fork                                         | [05](research/05-pi-ai-boundary.md)             |

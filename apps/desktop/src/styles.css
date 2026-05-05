@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@open-codesign/ui/theme.css";
+@import "@open-design/ui/theme.css";
 
 * {
   box-sizing: border-box;

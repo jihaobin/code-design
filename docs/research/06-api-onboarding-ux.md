@@ -69,7 +69,7 @@ Estimated cost: ~$0.01-0.05 per design session
 | Multi-key per provider | Cherry Studio（comma-separated，round-robin）                     | 对 power-user 友好                                       |
 | Ollama auto-detect     | Msty / Cherry Studio / Jan                                        | 显示在 first-run picker 中                               |
 
-## open-codesign 实现计划
+## open-design 实现计划
 
 - **Phase 0.1（整体路线图的 Phase 1）**：交付 Step 1 + Step 2A + Step 3，仅支持 Anthropic + OpenAI + OpenRouter。v0.1 跳过 Google Gemini（如需要则通过 OpenRouter 路由）。
 - **Phase 0.2**：添加 Ollama auto-detection。

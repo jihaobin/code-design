@@ -72,7 +72,7 @@ importers:
 
   apps/desktop:
     dependencies:
-      '@open-codesign/ui':
+      '@open-design/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       '@tauri-apps/api':
@@ -115,7 +115,7 @@ importers:
 
   packages/artifacts:
     dependencies:
-      '@open-codesign/shared':
+      '@open-design/shared':
         specifier: workspace:*
         version: link:../shared
       zod:
@@ -137,13 +137,13 @@ importers:
 
   packages/core:
     dependencies:
-      '@open-codesign/artifacts':
+      '@open-design/artifacts':
         specifier: workspace:*
         version: link:../artifacts
-      '@open-codesign/providers':
+      '@open-design/providers':
         specifier: workspace:*
         version: link:../providers
-      '@open-codesign/shared':
+      '@open-design/shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:
@@ -162,7 +162,7 @@ importers:
 
   packages/exporters:
     dependencies:
-      '@open-codesign/shared':
+      '@open-design/shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:
@@ -184,7 +184,7 @@ importers:
       '@mariozechner/pi-ai':
         specifier: 'catalog:'
         version: 0.72.1(ws@8.20.0)(zod@4.4.2)
-      '@open-codesign/shared':
+      '@open-design/shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:
@@ -203,7 +203,7 @@ importers:
 
   packages/runtime:
     dependencies:
-      '@open-codesign/shared':
+      '@open-design/shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:
@@ -241,7 +241,7 @@ importers:
 
   packages/templates:
     dependencies:
-      '@open-codesign/shared':
+      '@open-design/shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:

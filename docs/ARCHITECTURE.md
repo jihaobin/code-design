@@ -33,7 +33,7 @@
 - **`packages/core`** — 生成编排。接收用户提示词 + 设计系统 + 历史 → 调用 `providers` → 流式输出 artifacts → 发出 UI 订阅的事件。
 - **`packages/providers`** — 包装 `@mariozechner/pi-ai`，并补上 `docs/research/05-pi-ai-boundary.md` 中记录的六项缺失能力。应用代码绝不直接导入 provider SDK。
 - **`packages/runtime`** — Sandbox 预览。负责 iframe `srcdoc`、esbuild-wasm worker、import map 解析，以及内联评论和滑块绑定的 overlay script。
-- **`packages/ui`** — open-codesign 设计 tokens（CSS variables）+ 基于 Radix 的组件 primitives + Tailwind preset。由 `apps/desktop` 使用。
+- **`packages/ui`** — open-design 设计 tokens（CSS variables）+ 基于 Radix 的组件 primitives + Tailwind preset。由 `apps/desktop` 使用。
 - **`packages/artifacts`** — artifact 类型（HTML / SVG / slide deck / asset bundle）的 Zod schemas + `<artifact>` 标签流式解析器。
 - **`packages/exporters`** — PDF、PPTX、ZIP。每个 exporter 都是自己的 subpath export，并通过动态 import 保持冷启动 bundle 精简。
 - **`packages/templates`** — 内置演示提示词和 starter templates。运行时读取，不打包进 core。

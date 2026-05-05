@@ -1,4 +1,4 @@
-import "@open-codesign/ui/tokens.css";
+import "@open-design/ui/tokens.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
@@ -12,7 +12,7 @@ function App() {
       >
         <header>
           <p className="mb-2 text-xs font-bold tracking-normal text-text-muted uppercase">
-            open-codesign
+            open-design
           </p>
           <h1 className="m-0 text-2xl leading-[1.15] font-bold">AI design workspace</h1>
         </header>

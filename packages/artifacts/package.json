@@ -1,5 +1,5 @@
 {
-  "name": "@open-codesign/artifacts",
+  "name": "@open-design/artifacts",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -13,7 +13,7 @@
     "test": "vp test run --passWithNoTests"
   },
   "dependencies": {
-    "@open-codesign/shared": "workspace:*",
+    "@open-design/shared": "workspace:*",
     "zod": "catalog:"
   },
   "devDependencies": {

@@ -1,9 +1,9 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "open-codesign",
-  "mainBinaryName": "open-codesign",
+  "productName": "open-design",
+  "mainBinaryName": "open-design",
   "version": "0.0.0",
-  "identifier": "dev.opencodesign.app",
+  "identifier": "dev.opendesign.app",
   "build": {
     "beforeDevCommand": "vp dev --host 127.0.0.1 --port 1420 --strictPort",
     "beforeBuildCommand": "vp build",
@@ -14,7 +14,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "open-codesign",
+        "title": "open-design",
         "width": 1280,
         "height": 820,
         "minWidth": 960,

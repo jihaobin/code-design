@@ -1,5 +1,5 @@
 {
-  "name": "@open-codesign/desktop",
+  "name": "@open-design/desktop",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@open-codesign/ui": "workspace:*",
+    "@open-design/ui": "workspace:*",
     "@tauri-apps/api": "catalog:",
     "@tauri-apps/plugin-shell": "catalog:",
     "react": "catalog:",
