@@ -34,13 +34,13 @@ jobs:
         run: node .github/scripts/check-action-node24.mjs
 
       - name: Install
-        run: vp install --frozen-lockfile
+        run: pnpm dlx --package vite-plus@0.1.20 vp install --frozen-lockfile
 
       - name: Check
-        run: vp check
+        run: pnpm exec vp check
 
       - name: Test
-        run: vp test
+        run: pnpm exec vp test
 
   dco:
     name: DCO check
