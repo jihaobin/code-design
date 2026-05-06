@@ -1,5 +1,7 @@
 # 配置
 
+> 当前状态：配置文件解析、写入、引导向导和 OS keychain 集成尚未实现。本文描述的是 v0.1 目标格式，供后续实现和审查对齐。
+
 open-design 将配置存储在 `~/.config/open-design/config.toml` 的 TOML 文件中
 （如果设置了 `$XDG_CONFIG_HOME/open-design/config.toml`，则使用该路径）。该文件在首次
 成功完成引导时创建，是提供商、模型和密钥引用的唯一真实来源。真实 API 密钥存储在
@@ -51,6 +53,8 @@ account = "provider:anthropic:api-key"
 如果文件存在但格式错误，解析会抛出 `CONFIG_PARSE_FAILED` 错误。
 `CONFIG_SCHEMA_INVALID` 且应用会在界面中显示该错误——不会
 **静默回退**到默认值。
+
+以上行为是目标实现；当前桌面应用启动时直接显示静态 chat/preview shell。
 
 ## 添加新的提供商
 

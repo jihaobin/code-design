@@ -26,21 +26,21 @@ Exit immediately if any:
 
 open-codesign is an open-source AI design tool — Tauri-wrapped desktop app that turns prompts into HTML prototypes, slide decks, and marketing assets. Multi-model via `pi-ai`, BYOK, local-first.
 
-**Stack:** Tauri v2 wrapper, Node 24, React 19, TypeScript, Vite+, Tailwind v4, better-sqlite3, pnpm workspace, Oxlint/Oxfmt/Vitest through Vite+.
+**Stack:** Tauri v2 wrapper, Node 24, React 19, TypeScript, Vite+, Tailwind v4, pnpm workspace, Oxlint/Oxfmt/Vitest through Vite+. Local SQLite storage with `better-sqlite3` is a locked target, not implemented yet.
 
 **Key modules:**
 
 - `apps/desktop/` — Tauri wrapper + React renderer
 - `packages/core/` — generation orchestration
 - `packages/providers/` — pi-ai wrapper
-- `packages/runtime/` — iframe sandbox + esbuild-wasm
-- `packages/exporters/` — PDF / PPTX / ZIP
+- `packages/runtime/` — iframe `srcdoc` helper + overlay today; esbuild-wasm target is planned
+- `packages/exporters/` — raw HTML export today; PDF / PPTX / ZIP are planned
 
-Key docs: `AGENTS.md`, `README.md`, `docs/VISION.zh.md`, `docs/PRINCIPLES.zh.md`, `docs/ROADMAP.zh.md`.
+Key docs: `AGENTS.md`, `README.md`, `docs/VISION.md`, `docs/PRINCIPLES.md`, `docs/ROADMAP.md`.
 
 ## Task
 
-1. **Read** `AGENTS.md`, `README.md`, `docs/VISION.zh.md`, and `docs/PRINCIPLES.zh.md` for project context
+1. **Read** `AGENTS.md`, `README.md`, `docs/VISION.md`, and `docs/PRINCIPLES.md` for project context
 2. **Analyze** the issue — understand what the user needs
 3. **Research** the codebase — find relevant code with evidence
 4. **Respond** with accurate information and post to GitHub
@@ -52,7 +52,7 @@ Key docs: `AGENTS.md`, `README.md`, `docs/VISION.zh.md`, `docs/PRINCIPLES.zh.md`
 - **Language**: match the issue's language (Chinese / English).
 - **Missing Info**: ask for the minimum required details (max 4 items) if needed.
 - **Tone**: friendly and helpful. Thank the user for reporting.
-- **Pre-alpha context**: remind users this is pre-alpha — many features tracked in `docs/ROADMAP.zh.md` aren't built yet.
+- **Pre-alpha context**: remind users this is pre-alpha — many features tracked in `docs/ROADMAP.md` aren't built yet.
 
 ## Response Format
 

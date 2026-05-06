@@ -10,15 +10,19 @@
 2. **首次运行优先走免费层路径**，通过 OpenRouter `openrouter/free`（或内置演示 key，轮换、限流）。用户至少生成 1 个设计后，才要求他们提供自己的 key。
 3. **流式输出，并在 ≤ 200 ms 内展示骨架屏**。感知延迟降低 40-60%（Stanford HCI 2024）。
 
-## 本周可快速落地的事项（已进行中或已排队）
+## 当前实现备注
 
-| #   | 事项                                                                    | 负责人 / 位置                                                         | 状态   |
-| --- | ----------------------------------------------------------------------- | --------------------------------------------------------------------- | ------ |
-| 1   | 默认系统提示词（Tailwind + shadcn + Lucide + 禁用靛蓝 + 响应式 + 过渡） | `wt/first-demo` → `packages/templates/src/system/design-generator.md` | 进行中 |
-| 2   | 通过 OpenRouter 免费路由提供免费层路径                                  | `wt/onboarding` → 欢迎步骤中的“免费试用”按钮                          | 进行中 |
-| 3   | 带 3 个入门标签和交互式缩略图的空状态                                   | `wt/preview-ux` → `EmptyState.tsx`                                    | 进行中 |
-| 4   | 流式输出 + 200 ms 骨架屏                                                | `wt/first-demo` 合入后的后续事项                                      | 已排队 |
-| 5   | 可跳过的新手引导（在 key 步骤突出显示“跳过 — 先使用免费模型”链接）      | `wt/onboarding` 待确认                                                | 进行中 |
+截至当前代码状态，`packages/core/src/index.ts` 只内联了一个第一层级英文默认 system prompt，并未使用下方“已锁定”提示词；`packages/templates/src/system/design-generator.md` 也尚不存在。`packages/templates/src/index.ts` 当前只有 4 个内置 demo prompt。流式输出、免费层路径、onboarding 和骨架屏仍未实现。
+
+## 本周可快速落地的事项（研究建议，尚未全部落地）
+
+| #   | 事项                                                                    | 负责人 / 位置                                                 | 状态   |
+| --- | ----------------------------------------------------------------------- | ------------------------------------------------------------- | ------ |
+| 1   | 默认系统提示词（Tailwind + shadcn + Lucide + 禁用靛蓝 + 响应式 + 过渡） | 目标位置：`packages/templates/src/system/design-generator.md` | 未实现 |
+| 2   | 通过 OpenRouter 免费路由提供免费层路径                                  | 目标位置：欢迎步骤中的“免费试用”按钮                          | 未实现 |
+| 3   | 带 3 个入门标签和交互式缩略图的空状态                                   | 目标位置：preview 空状态组件                                  | 未实现 |
+| 4   | 流式输出 + 200 ms 骨架屏                                                | 目标位置：`core` / renderer 生成链路                          | 未实现 |
+| 5   | 可跳过的新手引导（在 key 步骤突出显示“跳过 — 先使用免费模型”链接）      | 目标位置：onboarding                                          | 未实现 |
 
 ## v0.1 发布检查清单（10 个二元标准）
 
@@ -59,7 +63,7 @@ HTML/React。
 8. 只输出组件代码，不要解释。
 ```
 
-该提示词已提交到 `packages/templates/src/system/design-generator.md`，并由 `packages/core/src/index.ts` 使用。更新它需要提交 PR，并附上研究报告风格的理由说明。
+该提示词是研究决策的目标版本；当前尚未提交到 `packages/templates/src/system/design-generator.md`，也未由 `packages/core/src/index.ts` 使用。实现它需要提交 PR，并附上研究报告风格的理由说明。
 
 ## 三个演示提示词（跨模型）
 
@@ -67,7 +71,7 @@ HTML/React。
 2. **移动端新手引导流程** — 在 OpenAI GPT 上效果最好（表单 + 微交互）
 3. **AI 生产力落地页** — 在 Gemini 上效果最好（组件系统 + 令牌）
 
-用于 `packages/templates/src/index.ts` 的 `BUILTIN_DEMOS`（除了已有的四个：冥想应用、案例研究、融资演示文稿、营销素材）。
+计划加入 `packages/templates/src/index.ts` 的 `BUILTIN_DEMOS`。当前已有四个：冥想应用、案例研究、融资演示文稿、营销素材。
 
 ## 来源（关键）
 

@@ -12,7 +12,7 @@
 - ✅ 重型功能（PPTX export、web capture、codebase scan）必须在首次使用时通过动态 `import()` 加载
 - ✅ Tauri 只作为桌面窗口和打包层；不要把业务逻辑放进 Rust
 - ✅ 使用 Vite+ + Rolldown；产出仅 ESM 的输出；积极 tree-shake
-- ✅ CI 运行 `size-limit` 和 `bundlewatch` — 增长 > 5% 会使 build 失败
+- ✅ CI 最终必须运行安装体积 / bundle 预算检查 — 当前仓库尚未接入 `size-limit` / `bundlewatch`
 
 **依赖预算：生产依赖 ≤ 30 个。**
 

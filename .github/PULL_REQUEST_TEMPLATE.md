@@ -17,7 +17,7 @@
 
 ## Checklist
 
-- [ ] I read [`AGENTS.md`](../AGENTS.md), [`docs/VISION.zh.md`](../docs/VISION.zh.md), and [`docs/PRINCIPLES.zh.md`](../docs/PRINCIPLES.zh.md) before starting
+- [ ] I read [`AGENTS.md`](../AGENTS.md), [`docs/VISION.md`](../docs/VISION.md), and [`docs/PRINCIPLES.md`](../docs/PRINCIPLES.md) before starting
 - [ ] Commits are signed with DCO (`git commit -s`)
 - [ ] `vp check && vp test && vp run -r build` passes locally
 - [ ] Added/updated tests for the change
@@ -30,7 +30,7 @@
 
 ## Size / compatibility / upgrade impact
 
-<!-- Required for user-visible changes: install-size delta, schema/API/IPC versioning, migration path, and whether this satisfies docs/PRINCIPLES.zh.md §5b. -->
+<!-- Required for user-visible changes: install-size delta, schema/API/IPC versioning, migration path, and whether this satisfies docs/PRINCIPLES.md §5b. -->
 
 ## Screenshots / recordings (UI changes)
 

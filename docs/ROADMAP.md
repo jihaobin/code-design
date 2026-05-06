@@ -6,25 +6,35 @@
 
 **目标**：仓库已经准备好接收代码。
 
-- [ ] 仓库已创建（`open-design`）
-- [ ] 本地 git 已初始化，remote 已链接
-- [ ] Vision、Principles、AGENTS.md 已起草
-- [ ] Apache-2.0 license + DCO + standard OSS files
-- [ ] Vite+ + pnpm workspace + TypeScript + Oxlint/Oxfmt/Vitest scaffold
-- [ ] CI：lint、typecheck、test、size budget
-- [ ] CONTRIBUTING + ISSUE/PR templates + CODEOWNERS
-- [ ] 第一次 commit 已 push
+- [x] 仓库已创建并初始化（当前 remote：`jihaobin/code-design`）
+- [x] Vision、Principles、AGENTS.md 已起草
+- [x] Vite+ + pnpm workspace + TypeScript + Oxlint/Oxfmt/Vitest scaffold
+- [x] Tauri v2 + React renderer shell 已创建
+- [x] 基础 packages 已创建：`core`、`providers`、`runtime`、`ui`、`artifacts`、`exporters`、`templates`、`shared`
+- [x] CI：lint/typecheck/test 已配置（macOS、Windows、Ubuntu）
+- [x] DCO 检查已配置
+- [x] ISSUE/PR templates + CODEOWNERS 已添加
+- [ ] Apache-2.0 license 文件尚未添加到仓库根目录
+- [ ] CONTRIBUTING / CODE_OF_CONDUCT / SECURITY 等 standard OSS files 尚未添加
+- [ ] CI size budget 尚未配置（`size-limit` / `bundlewatch` 未接入）
+- [ ] Changesets 尚未配置（release workflow 当前会检测并跳过）
 
 ## Phase 1 — Spike（研究落地后）
 
 **目标**：用一个演示验证架构。不做 UI 打磨。
 
-依赖 `docs/RESEARCH_QUEUE.md` 完成。研究完成后：
+初始研究已关闭，正在把第一层级实现接成可运行演示。
 
-- [ ] `packages/providers` 包装 pi-ai，导出统一的 `generate()`
-- [ ] `packages/runtime` 在 iframe sandbox 中渲染一个 HTML artifact（sandbox 技术待研究项 #3 决定）
-- [ ] `packages/core` 编排：prompt → model call → artifact → render
-- [ ] `apps/desktop` Tauri wrapper + React renderer，带 chat panel + preview pane
+- [x] `packages/providers` 包装 pi-ai，当前导出非流式 `complete()`
+- [x] `packages/core` 编排：prompt → model call → artifact parsing
+- [x] `packages/runtime` 可构建 iframe `srcdoc` 并注入元素选择 overlay
+- [x] `apps/desktop` Tauri wrapper + React renderer，带静态 chat panel + preview pane
+- [ ] 将 `apps/desktop` 表单接入 `core.generate()`
+- [ ] 将生成的 HTML artifact 渲染到 iframe preview
+- [ ] API key / model picker / first-run onboarding
+- [ ] 本地配置与 OS keychain
+- [ ] SQLite 设计历史存储
+- [ ] 可取消的生成与用户可见错误状态
 - [ ] 一个演示端到端可用：**Calm Spaces meditation app**
 
 ## Phase 2 — Three demos
